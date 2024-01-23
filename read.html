@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunraku</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/81b852f4d6.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="sunraku.png">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+    <img src="sunraku.png" alt="" class="logo">
+    <nav>
+        <ul id="menulist">
+            <li><a href="">Home</a></li>
+            <li><a href="">Top Manga</a></li>
+            <li><a href="">Latest Manga</a></li>
+            <li><a href="">All Genres</a></li>
+
+        </ul>
+    </nav>
+    <i class="fa-solid fa-bars" onclick="toggle()"></i>
+</div>
+
+<div class="row">
+    <div class="column_1">
+        <h2>Coming Soon...</h2>
+        
+        
+        <div class="buttons">
+            <button class="button_start" type="button">Go Back<i class="fa-solid fa-arrow-right-long"></i></button>
+        </div>
+
+    
+        
+        
+    </div>
+
+    <div class="MangaSection">
+        <div class="mangaTitle">
+        <h2>Shangri-La Frontier</h2>
+    </div>
+    <div class="ImageSection">
+      
+    
+        <img src="manga1.jpg" alt="" class="manga1" > <br>
+       
+
+        
+        
+
+    </div>
+   
+    </div>
+   
+</div>
+
+</div>
+</body>
+<script>
+    var menulist = document.getElementById("menulist");
+        menulist.style.maxHeight = "0px";
+
+        function toggle(){
+            if(menulist.style.maxHeight == "0px"){
+                menulist.style.maxHeight = "130px";
+            }
+            else{
+                menulist.style.maxHeight = "0px";
+            }
+        }
+    
+</script>
+<script src="main.js"></script>
+</html>
