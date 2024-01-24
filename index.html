@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sunraku</title>
+    <title>Manggo</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/81b852f4d6.js" crossorigin="anonymous"></script>
-    <link rel="icon" href="sunraku.png">
+    <link rel="icon" href="MANGGO_LOGO.png">
 </head>
 <body>
     <div class="container">
         <div class="navbar">
-    <img src="sunraku.png" alt="" class="logo">
+    <img src="MANGGO_LOGO.png" alt="" class="logo">
+    <h2 class="mabgs">MANGGO</h2>
     <nav>
         <ul id="menulist">
             <li><a href="">Home</a></li>
@@ -23,7 +24,9 @@
     </nav>
     <i class="fa-solid fa-bars" onclick="toggle()"></i>
 </div>
-
+<div class="ekis" >
+    <i onclick="closeit()" class="fa-solid fa-xmark"></i>
+</div>
 <div class="row">
     <div class="column_1">
         <h2>About Sunraku:</h2>
@@ -58,9 +61,12 @@
 </div>
 
 </div>
+<div class="black">
+    <img class="blackimage" src="black.png" alt="">
+</div>
 </body>
 <script>
-    var menulist = document.getElementById("menulist");
+    /*var menulist = document.getElementById("menulist");
         menulist.style.maxHeight = "0px";
 
         function toggle(){
@@ -71,6 +77,26 @@
                 menulist.style.maxHeight = "0px";
             }
         }
+        */
+
+        var menulist = document.getElementById("menulist");
+        var black = document.querySelector(".blackimage");
+        var ekis = document.querySelector(".ekis");
+
+        function toggle(){
+         
+            
+            menulist.style.opacity = "1";
+            black.style.display = "flex";
+            ekis.style.opacity = "1";
+        }
+function closeit(){
+    menulist.style.opacity= "0";
+    black.style.display = "none";
+    ekis.style.opacity = "0";
+
+}
+        
     
 </script>
 <script src="main.js"></script>

@@ -29,7 +29,7 @@ body{
 }
 
 .logo{
-    width: 60px;
+    width: 80px;
     cursor: pointer;
     margin: 30px 0;
     margin-bottom: 0%;
@@ -49,6 +49,7 @@ list-style: none;
 display: inline-block;
 margin-right: 30px;
 margin-bottom: 0%;
+color: #000000;
 
 }
 
@@ -105,8 +106,8 @@ button{
     width: 140px;
     border: 0;
     padding: 12px 10px;
-    color: #fff;
-    background:linear-gradient(to right, rgb(61, 112, 224), rgb(17, 57, 145));
+    color: #000000;
+    background:linear-gradient( rgb(212, 226, 17), rgb(255, 251, 21));
     font-weight: bold;
     border-radius: 8px;
     cursor: pointer;
@@ -137,7 +138,7 @@ button:hover{
     content:"";
     width: 10px;
     height: 100%;
-    background:linear-gradient( rgb(61, 112, 224), rgb(17, 57, 145));
+    background:linear-gradient( rgb(221, 224, 61), rgb(201, 219, 37));
     position: absolute;
     left: -40px;
     top: 8px;
@@ -198,24 +199,28 @@ button:hover{
 
 @media only screen and (max-width: 700px) {
     nav ul{
-        display: block;
-        width: 100%;
-        background:linear-gradient( rgb(61, 112, 224), rgb(17, 57, 145));
-        position: absolute;
-        top: 75px;
-        right: 0;
-        z-index: 2;
+        
+       display: none;
+        
     
     }
     nav ul li{
-       display: block; 
+      
        margin-top: 10px;
        margin-bottom: 10px;
+      
       
 
     }
     nav ul li a{
-        color: #ffffff;
+        color: #020202;
+        font-size: 28px;
+        left: 30px;
+        background-color: rgba(212, 200, 24, 0.979);
+        border-radius: 20px;
+        margin-bottom: 20px;
+        padding: 15px;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;        font-weight: bold;       
 
     }
  
@@ -224,13 +229,14 @@ button:hover{
         font-size: 30px;
         position: relative;
         top: 15px;
+        z-index: 3;
     }
 
     .column_1::after{
         content:"";
         width: 10px;
         height: 60%;
-        background:linear-gradient( rgb(61, 112, 224), rgb(17, 57, 145));
+        background:linear-gradient( rgb(221, 224, 61), rgb(201, 219, 37));
         position: absolute;
         left: -40px;
         top: 0px;
@@ -241,5 +247,57 @@ button:hover{
         flex-direction: column;
         margin: 50px 0;
     }
- 
+
+    #menulist{
+        height: 60%;
+        width: 100%;
+        position: absolute;
+        list-style: none;
+        top: 140px;
+        left: -20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+        z-index: 2;
+        justify-content: space-evenly;
+       opacity: 0;
+
+    }
+
+    .blackimage{
+        display: none;
+        position: absolute;
+        width: 100%;
+        height: 200%;
+        top: 0;
+        bottom: 0;
+        opacity: 0.5;
+    }
+    
+ .mabgs{
+    position: relative;
+    top: 15px;
+    color: rgba(255, 238, 0, 0.979);
+    text-decoration: #000000;
+
+ }
+
+ .mabgs{ animation: leWaterWave .2s linear infinite }
+ @keyframes leWaterWave {
+     50% { transform: skewY(1deg) skewX(-1deg) scale(1.06) }
+ }
+
+ .ekis i{
+    font-size: 2em;
+    z-index: 99;
+    position: absolute;
+    left: 40px;
+   
+ }
+.ekis{
+    opacity: 0;
+    z-index: 99;
+
+}
 }

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Slider</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <style>
+        body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Same as before */
+
+.slider-wrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  /* Reverse the order to start from the right */
+  transform: translateX(-100%);
+}
+
+.slider-wrapper img {
+  width: 100%;
+  height: auto;
+}
+
+.slider-indicator {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.slider-indicator span {
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider-indicator span.active {
+  background-color: #333;
+}
+
+    </style>
+  <div class="slider-container">
+    <div class="slider-wrapper">
+      <img src="1.png" alt="Image 1">
+      <img src="2.png" alt="Image 2">
+      <img src="3.png" alt="Image 3">
+      <!-- Add more images as needed -->
+    </div>
+    <div class="slider-indicator"></div>
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+  const wrapper = document.querySelector(".slider-wrapper");
+  const indicators = document.querySelectorAll(".slider-indicator span");
+  let index = 0;
+
+  function updateSlider() {
+    wrapper.style.transform = `translateX(${-index * 100}%)`;
+    indicators.forEach((indicator, i) => {
+      indicator.classList.toggle("active", i === index);
+    });
+  }
+
+  function nextSlide() {
+    index = (index + 1) % indicators.length;
+    updateSlider();
+  }
+
+  function prevSlide() {
+    index = (index - 1 + indicators.length) % indicators.length;
+    updateSlider();
+  }
+
+  indicators.forEach((indicator, i) => {
+    indicator.addEventListener("click", function () {
+      index = i;
+      updateSlider();
+    });
+  });
+
+  setInterval(nextSlide, 3000);
+});
+
+  </script>
+</body>
+</html>
